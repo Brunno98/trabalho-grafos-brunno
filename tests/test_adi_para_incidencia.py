@@ -12,21 +12,8 @@ from parameterized import parameterized, param, parameterized_class
 from src import tarefa_grupo_2
 import json
 
-# @parameterized_class(
-#     json.load(open("tests/data/adjacencia_para_incidencia_data.json"))
-# )
+
 class TestAdjParaIncidencia(unittest.TestCase):
-
-    # def test_matriz_adjacencia_para_incidencia(self):
-    #     """
-    #     Deve ser retornado uma matriz de incidencia baseada na matriz de adjencecia fornecida.
-    #     Deve também retornar a quantidade de vertices e a quantidade de arestas da matriz.
-    #     """
-    #     matriz_incidencia, quantidade_vertices, quantidade_arestas = tarefa_grupo_2.adj_para_incidencia(self.matriz_adjacencia)
-
-    #     np.assert_array_equal(matriz_incidencia, self.matriz_incidencia_esperada)
-    #     self.assertEqual(quantidade_vertices, self.vertices_esperados)
-    #     self.assertEqual(quantidade_arestas, self.arestas_esperadas)
 
     @parameterized.expand(
             param.explicit(kwargs=data) for data in json.load(open("tests/data/adjacencia_para_incidencia_data.json"))
