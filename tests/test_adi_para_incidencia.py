@@ -18,12 +18,12 @@ class TestAdjParaIncidencia(unittest.TestCase):
     @parameterized.expand(
             param.explicit(kwargs=data) for data in json.load(open("tests/data/adjacencia_para_incidencia_data.json"))
     )
-    def test_matriz_adjacencia_para_incidencia(self, matriz_adjacencia, matriz_incidencia_esperada, vertices_esperados, arestas_esperadas):
+    def test_matriz_adjacencia_para_incidencia(self, matriz_adjacencia, direcionado, matriz_incidencia_esperada, vertices_esperados, arestas_esperadas):
         """
         Deve ser retornado uma matriz de incidencia baseada na matriz de adjencecia fornecida.
         Deve também retornar a quantidade de vertices e a quantidade de arestas da matriz.
         """
-        matriz_incidencia, quantidade_vertices, quantidade_arestas = tarefa_grupo_2.adj_para_incidencia(matriz_adjacencia)
+        matriz_incidencia, quantidade_vertices, quantidade_arestas = tarefa_grupo_2.adj_para_incidencia(matriz_adjacencia, direcionado)
 
         np.assert_array_equal(matriz_incidencia, matriz_incidencia_esperada)
         self.assertEqual(quantidade_vertices, vertices_esperados)

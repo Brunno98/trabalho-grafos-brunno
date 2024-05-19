@@ -4,6 +4,7 @@
                               [1, 0, 1, 0],
                               [0, 1, 0, 1],
                               [1, 0, 1, 0]],
+        "direcionado":false,
         "matriz_incidencia_esperada": [[1, 1, 0, 0],
                                        [1, 0, 1, 0],
                                        [0, 0, 1, 1],
@@ -16,6 +17,7 @@
                               [1, 0, 1, 1],
                               [1, 1, 0, 1],
                               [1, 1, 1, 0]],
+        "direcionado":false,
         "matriz_incidencia_esperada": [[1, 1, 1, 0, 0, 0],
                                        [1, 0, 0, 1, 1, 0],
                                        [0, 1, 0, 1, 0, 1],
@@ -28,6 +30,7 @@
                               [0, 0, 0, 0],
                               [0, 0, 0, 0],
                               [0, 0, 0, 0]],
+        "direcionado":false,
         "matriz_incidencia_esperada": [[],[],[],[]],
         "vertices_esperados": 4,
         "arestas_esperadas": 0
@@ -38,6 +41,7 @@
                               [1, 0, 0, 0, 0],
                               [2, 1, 0, 0, 1],
                               [1, 0, 0, 1, 1]],
+        "direcionado":false,
         "matriz_incidencia_esperada": [[1, 1, 1, 1, 0, 0, 0],
                                        [0, 0, 0, 0, 1, 0, 0],
                                        [1, 0, 0, 0, 0, 0, 0],
@@ -45,5 +49,18 @@
                                        [0, 0, 0, 1, 0, 1, 1]],
         "vertices_esperados": 5,
         "arestas_esperadas": 7
+    },
+    {
+        "matriz_adjacencia": [[0, 1, 2, 0],
+                              [0, 0, 0, 1],
+                              [0, 0, 0, 0],
+                              [0, 0, 1, 0]],
+        "direcionado":true,
+        "matriz_incidencia_esperada": [[1, 1, 1, 0, 0],
+                                      [-1, 0, 0, 1, 0],
+                                       [0,-1,-1, 0,-1],
+                                       [0, 0, 0,-1, 1]],
+        "vertices_esperados": 4,
+        "arestas_esperadas": 5
     }
 ]
